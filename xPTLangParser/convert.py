@@ -1,0 +1,51 @@
+from construct import *
+inputfiles = ['./input/bp_decode.txt','./input/bp_encode.txt','./input/coo_csr_ptr.txt','./input/csv.txt','./input/csv_raw.txt','./input/gvd.txt','./input/gve.txt','./input/rle_encode.txt','./input/rle_decode.txt','./input/hist.txt' ,'./input/dense_csr.txt']
+#inputfiles = ['./input/csv_raw.txt']
+
+for inputfile in inputfiles:
+  parser = file(inputfile)
+  variable_curate(parser)
+  parser.build_root()
+  print('Root node')
+  print (parser.root.child)
+
+  for i in range( 0, parser.size):
+    parser.find_child(i)
+    parser.find_parent(i)
+    parser.find_peer(i)
+    print('===============')
+    print('Node ', i, ', logic ',  parser.full_program[i].logic_level, ' type: ', parser.full_program[i].type)
+    print( parser.full_program[i].line)
+    #print( 'parent: ', parser.full_program[i].parent)
+    #print( 'peer: ', parser.full_program[i].peer)
+    #print( 'child: ', parser.full_program[i].child)
+  print('==========================BUILD BASIC GRAPH=====================')
+  parser.build_graph()
+  parser.dot_output('unconected')
+  print('==========================BACK SUBSTITUTION=====================')
+  parser.back_substitution()
+  parser.connect_root()
+  fp = open ( './report/' + parser.testname +'_report.txt', 'w')
+  fp.write('===================xPTLang Parser Report====================\n')
+  fp.write('Testname: '+parser.testname + '\n')
+  fp.write('Un-optimized Transducer\n')
+  fp.write('Number of State: ' + str(len(parser.stateList))+'\n')
+  fp.write('Number of Transition: ' + str(len(parser.transitionList))+'\n')
+  parser.dot_output('full')
+  #parser.print_fst()
+  print('==========================OPTIMIZATION=====================')
+  parser.optimized()
+  #parser.dot_output('trimmed_cut')
+  parser.remove_level1()
+  #parser.dot_output('trimmed_l1')
+  parser.remove_level2()
+  parser.dot_output('final')
+  parser.output()  
+
+  fp.write('\n')
+  fp.write('Topology Reduced Transducer\n')
+  fp.write('Number of State: ' + str(len(parser.stateList))+'\n')
+  fp.write('Number of Transition: ' + str(len(parser.transitionList))+'\n')
+  fp.write('===================End Parser Report====================\n')
+
+  fp.close()

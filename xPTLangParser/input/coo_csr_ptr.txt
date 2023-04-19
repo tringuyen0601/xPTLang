@@ -1,0 +1,29 @@
+s_1 = input_0
+output_0 = s_1
+s_1 = s_1 & 0
+s_0 = input_0
+output_0 = s_0
+s_3 = input_0
+output_0 = s_3
+s_2 = s_2 & 0
+output_1 = s_1
+while ( true)
+  cond ( true)
+    s_4 = input_1
+    if
+      cond ( s_2 == s_4)
+        s_1 = s_1 + 1
+        if 
+          cond ( s_1 == s_3)
+            output_1 = s_1
+            s_1 = s_1 & 0
+            s_2 = s_2 & 0
+          cond ( s_1 != s_3)  
+      cond ( s_2 != s_4)
+        output_1 = s_1 
+        s_4 = input_1
+        while ( s_2 != s_4)
+          cond ( s_2 != s_4)
+            s_2 = s_2 + 1
+            s_4 = input_1
+        s_1 = s_1 + 1

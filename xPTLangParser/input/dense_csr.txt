@@ -1,0 +1,27 @@
+s_0 = 0
+s_2 = input_0
+s_2 = input_0
+s_4 = input_0
+s_1 = 0
+s_3 = 0
+while( true)
+  cond (true)
+    s_3 = input_1
+    if
+      cond (s_3 != 0)
+        s_5 = s_5 + 1 
+      cond (s_3 == 0)
+    s_1 = s_1 + 1
+    if 
+      cond (s_1 == s_2)
+        s_1 = 0
+        s_0 = s_0 + 1
+        output_1 = s_5
+        if 
+          cond ( s_5 == s_4)
+            s_0 = 0
+            s_1 = 0
+            s_3 = 0 
+          cond ( s_5 != s_4)
+      cond (s_1 != s_2)
+

@@ -1,0 +1,6 @@
+Number of State: 21
+Number of Transition: 28
+Number of Stack: 3
+Number of Input Stream: 1
+Number of Output Stream: 1
+Stack bitmap: 0

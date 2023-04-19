@@ -1,0 +1,49 @@
+Name,Mode,State,Transition
+BPD,Unoptimized,44,44
+BPE,Unoptimized,48,48
+VLD,Unoptimized,54,55
+VLE,Unoptimized,34,35
+RLD,Unoptimized,18,19
+RLE,Unoptimized,32,33
+COO_CSR,Unoptimized,60,63
+Dense_CSR,Unoptimized,54,57
+HIST,Unoptimized,32,36
+CSV_Encd,Unoptimized,68,75
+CSV_Raw,Unoptimized,70,76
+Average,Unoptimized,46,49
+BPD,Topology Reduction,19,19
+BPE,Topology Reduction,21,21
+VLD,Topology Reduction,23,24
+VLE,Topology Reduction,13,14
+RLD,Topology Reduction,6,7
+RLE,Topology Reduction,11,12
+COO_CSR,Topology Reduction,22,25
+Dense_CSR,Topology Reduction,18,21
+HIST,Topology Reduction,7,11
+CSV_Encd,Topology Reduction,21,29
+CSV_Raw,Topology Reduction,22,28
+Average,Topology Reduction,16,19
+BPD,xPTLang,2,2
+BPE,xPTLang,2,2
+VLD,xPTLang,5,6
+VLE,xPTLang,5,6
+RLD,xPTLang,3,4
+RLE,xPTLang,5,6
+COO_CSR,xPTLang,10,13
+Dense_CSR,xPTLang,9,12
+HIST,xPTLang,6,10
+CSV_Encd,xPTLang,18,25
+CSV_Raw,xPTLang,18,24
+Average,xPTLang,7,10
+BPD,effPDT,15,15
+BPE,effPDT,17,17
+VLD,effPDT,14,15
+VLE,effPDT,6,7
+RLD,effPDT,3,4
+RLE,effPDT,3,4
+COO_CSR,effPDT,11,14
+Dense_CSR,effPDT,15,17
+HIST,effPDT,6,10
+CSV_Encd,effPDT,8,15
+CSV_Raw,effPDT,10,17
+Average,effPDT,9,12

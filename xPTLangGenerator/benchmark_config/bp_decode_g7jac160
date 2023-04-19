@@ -1,0 +1,14 @@
+Number of Input: 1
+Output  0:  ./input/g7jac160_csr_ind_BPDin_B
+Number of Output: 1  
+Output  0:  ./testcases/bp_decode/bp_output/Trec12.txt
+Benchmark : BP_DECODE
+Monitor Config  : ./experiment1/papi_config/sys_perf_config.txt
+
+Input   0:  ./testcases/sparse_matrix/bpdMatrix/Trec12.txt
+Output  0:  ./testcases/bp_decode/bp_input/Trec12.txt
+
+
+
+
+
